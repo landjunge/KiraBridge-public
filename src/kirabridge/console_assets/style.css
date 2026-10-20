@@ -1,0 +1,38 @@
+/* Product adapter only. Pinned networkpunkt.css remains byte-identical. */
+:root { color-scheme: dark; }
+body { margin: 0; }
+.console { max-width: 1040px; margin: auto; padding: var(--np-space-5) var(--np-space-4); }
+h1, h2, h3, p { margin: 0; }
+.console-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: var(--np-space-4); margin-bottom: var(--np-space-5); }
+.console-header h1 { margin: var(--np-space-1) 0 var(--np-space-2); }
+.header-actions { justify-content: flex-end; }
+[data-language] { min-width: var(--np-control); }
+[aria-pressed="true"] { background: var(--np-hover); border-color: var(--np-text); }
+.mode-panel { overflow-wrap: anywhere; background: var(--np-surface); border: 1px solid var(--np-divider); padding: var(--np-space-4); }
+.mode-panel h2 { margin-bottom: var(--np-space-2); }
+#approval-mode p + p { margin-top: var(--np-space-2); }
+#message { margin: var(--np-space-4) 0 var(--np-space-5); }
+#message[data-state="error"] { color: var(--np-danger); }
+.console > section + section { margin-top: var(--np-space-5); }
+.console > section > h2 { margin-bottom: var(--np-space-3); }
+.card { border: 1px solid var(--np-divider); background: var(--np-surface); padding: var(--np-space-4); margin-top: var(--np-space-3); overflow-wrap: anywhere; }
+.line { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--np-space-2) var(--np-space-4); }
+.state { font-size: var(--np-body); color: var(--np-muted); }
+.state.created, .state.queued, .state.unknown, .state.blocked { color: var(--np-warning); }
+.state.failed { color: var(--np-danger); }
+.state.running, .state.accepted { color: var(--np-text); }
+.meta, .identifier, .task-time { font-size: var(--np-meta); color: var(--np-muted); }
+.card > .meta { margin-top: var(--np-space-2); }
+.status-note { margin: var(--np-space-3) 0; }
+.identifier, pre { overflow-wrap: anywhere; white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.detail-content { min-width: 0; }
+.detail-content h3 { margin: var(--np-space-4) 0 var(--np-space-2); }
+.field-label { font-size: var(--np-meta); color: var(--np-muted); margin-top: var(--np-space-3); }
+pre { margin: var(--np-space-2) 0; background: var(--np-canvas); border: 1px solid var(--np-divider); padding: var(--np-space-3); font-size: var(--np-meta); max-height: 480px; overflow: auto; }
+.actions { margin-top: var(--np-space-4); }
+.empty { color: var(--np-muted); border: 1px dashed var(--np-divider); padding: var(--np-space-4); }
+footer { margin-top: var(--np-space-5); border-top: 1px solid var(--np-divider); padding-top: var(--np-space-4); }
+footer p + p { margin-top: var(--np-space-2); }
+@media (prefers-color-scheme: light) {
+  :root { color-scheme: light; --np-canvas: #f5f6f8; --np-surface: #ffffff; --np-hover: #e7eaf0; --np-divider: #c8cdd5; --np-control-border: #66717f; --np-text: #18202b; --np-muted: #526173; --np-action: #18202b; --np-action-text: #ffffff; --np-focus: #18202b; --np-success: #17613e; --np-warning: #76520b; --np-danger: #a1212b; }
+}

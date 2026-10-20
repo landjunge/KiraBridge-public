@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KiraBridge · Aufträge</title>
+  <link rel="stylesheet" href="/networkpunkt.css">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body class="np-ui np-scroll">
+  <main class="console">
+    <header class="console-header">
+      <div><p class="np-meta" data-i18n="localDevice">Auf diesem Gerät</p><h1>KiraBridge</h1><p data-i18n="intro">Aufträge prüfen und ihre Ausführung verfolgen.</p></div>
+      <div class="header-actions np-actions">
+        <a class="np-button" href="/team">Team</a>
+        <a class="np-button" href="/grok-connector">Grok / Eve verbinden</a>
+        <nav class="np-actions" aria-label="Sprache / Language"><button class="np-button" type="button" data-language="de" lang="de">DE</button><button class="np-button" type="button" data-language="en" lang="en">EN</button></nav>
+        <button class="np-button" id="refresh" type="button" data-i18n="refresh">Aktualisieren</button>
+      </div>
+    </header>
+    <section class="mode-panel" aria-labelledby="mode-title"><h2 id="mode-title" data-i18n="approvalMode">Freigabemodus</h2><div id="approval-mode" role="status"></div></section>
+    <p id="message" class="np-notice" role="status" tabindex="-1" data-i18n="connecting">Verbindung wird geprüft …</p>
+    <section aria-labelledby="pending-title"><h2 id="pending-title"><span data-i18n="pending">Deine Entscheidung</span> <span id="count" class="np-meta">0</span></h2><div id="pending"></div></section>
+    <section aria-labelledby="recent-title"><h2 id="recent-title" data-i18n="recent">Aufträge und Ergebnisse</h2><div id="recent"></div></section>
+    <footer class="np-meta"><p data-i18n="boundary">Der Freigabemodus gilt je Zugang und innerhalb seiner eingerichteten Rechte. Empfang, Ausführung und Abnahme des Gesamtauftrags sind getrennte Nachweise.</p><p data-i18n="limitedList">Bis zu 100 Vorgänge werden angezeigt. Eine Verbindungsstörung startet keinen Auftrag erneut.</p></footer>
+  </main>
+</body>
+</html>
